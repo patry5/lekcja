@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Kantor walutowy</title>
+<style> 
+body{
+    margin-left:750px;
+    margin-right: 770px;
+}
+    fieldset{
+margin: 5px;
+padding: 10px;
+max-width: 30px;
+
+
+}
+legend{
+text-align: center;
+color: lightseagreen;
+font-size: 50px;
+display: flex;
+}
+    
+    .currency-converter{
+       
+        padding: 10px;
+        width: 350px;
+    
+    }
+    .currency-converter__input{
+    direction: rtl;
+    }
+    .currency-converter__select{
+  
+    }
+    .currency-converter__button{
+        padding: 5px;
+        background-color: lightseagreen;
+        color: white;
+        border: 2px 2px black;
+    border-radius: 5px;
+font-size: 20px;
+text-align: center;
+width: 395px;
+margin-left:5px;
+
+}
+        
+
+</style>
+</head>
+<body>
+    <fieldset>
+        <legend>Kantor walutowy</legend>
+    <div class="currency-converter">
+       
+        <b>Kwota:</b>
+        <input type="number"
+        class="currency-converter__input"
+        placeholder="Wpisz kwotę">
+<select class="currency-converter__select">
+    <option value="PLN">PLN</option>
+    <option value="USD">USD</option>
+    <option value="GBP">GBP</option>
+    <option value="EUR">EUR</option>
+    <option value="CHF">CHF</option>
+</select>
+<p>*- pole wymagane</p>
+<p>Wybierz walute docelową</p>
+<div class="currency-converter__selector">
+<input type="radio" id="PLN" name="" value="PLN">
+<label for="PLN">PLN</label><br>
+<input type="radio" id="USD" name="" value="USD">
+<label for="USD">USD</label><br>
+<input type="radio" id="GBP" name="" value="GBP">
+<label for="GBP">GBP</label><br>
+<input type="radio" id="EUR" name="" value="EUR">
+<label for="EUR">EUR</label><br>
+<input type="radio" id="CHF" name="" value="CHF">
+<label for="CHF">CHF</label><br>
+
+</div>
+</fieldset>
+<button class="currency-converter__button"
+onclick="convertCurrency()">Przelicz</button>
+<div class="currency-converter__result" id="result"></div>
+    </div>
+    
+</body>
